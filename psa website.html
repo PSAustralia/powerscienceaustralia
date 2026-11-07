@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Science Australia - 2026 Product Catalogue & Checkout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-color: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .nav-link {
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ef4444;
+        }
+        /* Hide scrollbar for cleaner modals/drawers */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white text-sm py-2 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
+            <div class="flex items-center space-x-6 mb-2 sm:mb-0">
+                <span class="flex items-center font-medium">
+                    <span class="mr-2 text-red-500 font-bold">📱</span>
+                    Mobile: (+61) 422 351 610
+                </span>
+                <span class="flex items-center text-xs">
+                    <span class="mr-2 text-red-500 font-bold">✉️</span>
+                    <a href="mailto:onlinesales@powersciencegroup.com.au" class="hover:text-red-400 transition">onlinesales@powersciencegroup.com.au</a>
+                </span>
+            </div>
+            <div class="flex items-center text-xs sm:text-sm text-gray-300">
+                <span class="mr-2 text-red-500 font-bold">📍</span>
+                74 Killara Road, Campbellfield VIC 3061
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3.5 flex justify-between items-center">
+            <a href="#home" class="flex items-center space-x-3">
+                <img src="C:\Users\User\Desktop\Power Science Australia\logo.jpg"
+                     alt="Power Science Australia Logo"
+                     class="h-10 sm:h-12 w-auto object-contain">
+            </a>
+
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link font-semibold text-gray-700 py-2 border-b-2 border-transparent hover:border-red-500">Home</a>
+                    <a href="#products" class="nav-link font-semibold text-gray-700 py-2 border-b-2 border-transparent hover:border-red-500">Shop</a>
+                    <a href="#testimonials" class="nav-link font-semibold text-gray-700 py-2 border-b-2 border-transparent hover:border-red-500">Reviews</a>
+                    <a href="#about" class="nav-link font-semibold text-gray-700 py-2 border-b-2 border-transparent hover:border-red-500">About Us</a>
+                </nav>
+
+                <button onclick="toggleCartDrawer()" class="relative bg-gray-900 hover:bg-red-600 text-white px-4 py-2.5 rounded-xl flex items-center space-x-2 transition shadow-md group">
+                    <span class="text-base group-hover:scale-110 transition transform">🛒</span>
+                    <span class="hidden sm:inline font-semibold text-sm">Cart</span>
+                    <span id="cart-badge" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center shadow-md border-2 border-white">0</span>
+                </button>
+
+                <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-gray-700 hover:text-red-600 focus:outline-none p-1">
+                    <span class="text-2xl">☰</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden bg-white border-t border-gray-200 shadow-inner absolute w-full left-0 z-30">
+            <nav class="flex flex-col px-4 py-2">
+                <a href="#home" onclick="toggleMobileMenu()" class="py-3 border-b border-gray-100 text-gray-700 font-medium">Home</a>
+                <a href="#products" onclick="toggleMobileMenu()" class="py-3 border-b border-gray-100 text-gray-700 font-medium">Shop</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="py-3 border-b border-gray-100 text-gray-700 font-medium">Reviews</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="py-3 text-gray-700 font-medium">About Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern py-6 lg:py-8 relative overflow-hidden border-b border-gray-200">
+        <div class="w-full px-2 sm:px-6 relative z-10">
+            <div class="flex flex-col items-center gap-8">
+                <div class="w-full">
+                    <div class="relative bg-white p-3 rounded-2xl shadow-2xl border-4 border-white overflow-hidden group">
+                        <div class="relative h-[400px] sm:h-[550px] lg:h-[650px] w-full rounded-xl overflow-hidden bg-gray-900">
+                            <!-- Slides -->
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-100 flex items-center justify-center">
+                                <img src="C:\Users\User\Desktop\Power Science Australia\Solar.jpg" alt="Solar Panels & MPPT Chargers" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8 sm:p-12">
+                                    <div>
+                                        <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Off-Grid Solar Power</span>
+                                        <h3 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-1">Solar Panels & MPPT Chargers</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
+                                <img src="C:\Users\User\Desktop\Power Science Australia\Powerpoint.png" alt="Powerpoints & Switches" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8 sm:p-12">
+                                    <div>
+                                        <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">240V Hardware</span>
+                                        <h3 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-1">Powerpoints & Double Pole Switches</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
+                                <img src="C:\Users\User\Desktop\Power Science Australia\Circuit.png" alt="Circuit Breakers & Fuses" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8 sm:p-12">
+                                    <div>
+                                        <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">DC Safety Systems</span>
+                                        <h3 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-1">DC Circuit Breakers & Fuse Boxes</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
+                                <img src="C:\Users\User\Desktop\Power Science Australia\Fan cooling.jpg" alt="Heating & Comfort" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-8 sm:p-12">
+                                    <div>
+                                        <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block">Caravan Climate Control</span>
+                                        <h3 class="text-white text-2xl sm:text-4xl lg:text-5xl font-extrabold mt-1">Cooling Systems & Heating</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Controls -->
+                        <div class="flex justify-center space-x-3 mt-4 pb-2">
+                            <button onclick="currentSlide(0)" class="slide-dot w-4 h-4 rounded-full bg-red-600 transition shadow-sm" aria-label="Slide 1"></button>
+                            <button onclick="currentSlide(1)" class="slide-dot w-4 h-4 rounded-full bg-gray-300 transition shadow-sm" aria-label="Slide 2"></button>
+                            <button onclick="currentSlide(2)" class="slide-dot w-4 h-4 rounded-full bg-gray-300 transition shadow-sm" aria-label="Slide 3"></button>
+                            <button onclick="currentSlide(3)" class="slide-dot w-4 h-4 rounded-full bg-gray-300 transition shadow-sm" aria-label="Slide 4"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-red-600 font-extrabold text-xs tracking-widest uppercase bg-red-50 px-3 py-1 rounded-full border border-red-100">Trade & Retail Supply</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-2 mb-3">Our 2026 Product Range</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto mb-4 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">Explore our comprehensive selection of high-quality components designed for reliability and performance in mobile and off-grid applications.</p>
+            </div>
+
+            <!-- Search / Filter -->
+            <div class="max-w-xl mx-auto mb-12">
+                <div class="relative">
+                    <input type="text" id="catalogue-search" oninput="filterCategories()" placeholder="Search for categories (e.g. Solar, Switches, Breakers)..." class="w-full pl-10 pr-20 py-3.5 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none transition shadow-sm text-sm">
+                    <span class="absolute left-3.5 top-3.5 text-gray-400 text-sm">🔍</span>
+                    <button onclick="resetSearch()" class="absolute right-3 top-3 text-xs text-gray-600 hover:text-red-600 font-bold bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded transition">Clear</button>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 mt-4">
+                    <button onclick="quickSearch('Power')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-3 py-1.5 rounded-full transition">Powerpoints</button>
+                    <button onclick="quickSearch('Solar')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-3 py-1.5 rounded-full transition">Solar & MPPT</button>
+                    <button onclick="quickSearch('Breaker')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-3 py-1.5 rounded-full transition">Breakers</button>
+                    <button onclick="quickSearch('Light')" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-3 py-1.5 rounded-full transition">Lighting</button>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div id="categories-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Category Cards -->
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="powerpoints switches 10a gang dual" onclick="openModal('powerpoints')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Powerpoint.png" alt="Powerpoints & Switches" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 1</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Powerpoints & Switches</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Wide range of 10A single/double powerpoints, 1-6 gang switches in various colors.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="circuit breakers fuses dc safety box" onclick="openModal('breakers')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Circuit.png" alt="Circuit Breakers & Fuses" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 2</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Circuit Breakers & Fuses</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">DC Circuit Breakers (50A-100A), Fuse Boxes (4-10 Channel), fuses and busbars.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="connectors lugs terminals copper anderson" onclick="openModal('connectors')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\connectors.png" alt="Connectors & Lugs" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 3</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Connectors & Lugs</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Copper cable lugs, insulated terminals, Anderson plugs, high current connector cables.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="solar panels chargers mppt dc-dc offgrid" onclick="openModal('solar')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Solar.jpg" alt="Solar & Chargers" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 4-5</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Solar & Chargers</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Solar Panels (170W-210W), MPPT Controllers, DC-DC Chargers, MC4 Accessories.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="sockets plugs inlets 15a 12v usb rcbo" onclick="openModal('sockets')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Socket and Inlets.jpg" alt="Sockets & Plugs" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 5</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Sockets & Plugs</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">12V/USB combo sockets, flat plugs (7/12 pin), 15A Power Inlets, 10A Outlets, RCBOs.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="lights lighting led strips handle markers sink" onclick="openModal('lights')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Lightning.jpg" alt="Lighting Solutions" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 6</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Lighting Solutions</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Handle lights, Side Markers 12v, Sink Lights, LED Strips and connectors.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="basins ceramic waste sink white black gold" onclick="openModal('basins')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Ceramic basin.png" alt="Ceramic Basins & Waste" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 7</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Ceramic Basins & Waste</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Oval, Square, Rectangle ceramic basins in White, Black, Gold, Grey. Waste options.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="category-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden hover:shadow-xl hover:border-red-200 transition duration-300 group cursor-pointer flex flex-col justify-between" data-keywords="comfort heating tv 240v fans diesel heater" onclick="openModal('comfort')">
+                    <div>
+                        <div class="h-56 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-3 relative overflow-hidden">
+                            <img src="C:\Users\User\Desktop\Power Science Australia\Entertainment.jpg" alt="Heating, TV & 240V" class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-5">
+                            <span class="text-[10px] uppercase bg-red-100 text-red-600 px-2 py-0.5 rounded font-bold">Section 8-11</span>
+                            <h3 class="text-xl font-bold mt-2 text-gray-900 group-hover:text-red-600 transition">Heating, TV & 240V</h3>
+                            <p class="text-sm text-gray-500 mt-2 mb-4">Fan Cooling Systems, 2kW Diesel Heater Kits, Smart TVs, Speakers, and 240V Appliances.</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pb-5 pt-0">
+                        <button class="w-full bg-red-50 group-hover:bg-red-600 text-red-600 group-hover:text-white font-bold py-2.5 px-4 rounded-lg text-sm flex items-center justify-center transition">
+                            <span>Browse Items</span>
+                            <span class="ml-2 transition-transform group-hover:translate-x-1">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty Search State -->
+            <div id="no-results" class="hidden text-center py-16 bg-gray-50 rounded-2xl border border-dashed border-gray-300 mt-8">
+                <div class="text-4xl mb-3">🔍</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">No categories found</h3>
+                <p class="text-gray-500 text-sm mb-6 max-w-md mx-auto">We couldn't find any categories matching your search. Try a broader keyword.</p>
+                <button onclick="resetSearch()" class="bg-red-600 text-white font-bold px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow">View All Categories</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Completed) -->
+    <section id="testimonials" class="py-16 bg-gray-100 border-t border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-red-600 font-extrabold text-xs tracking-widest uppercase bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">Trusted Across Australia</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2 mb-3">Customer Reviews & Testimonials</h2>
+                <div class="w-20 h-1 bg-red-600 mx-auto mb-4 rounded-full"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">See what caravan builders, auto electricians, and off-grid enthusiasts across Australia say about our hardware and components.</p>
+            </div>
+
+            <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4 text-base">★★★★★</div>
+                        <p class="text-gray-700 italic text-sm mb-6 leading-relaxed">"The dual pole powerpoints and circuit breakers we ordered for our caravan fitout are top-notch quality. Fast dispatch from their Campbellfield warehouse too!"</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t pt-4 border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Marcus Vance</h4>
+                            <span class="text-xs text-gray-500">Melbourne Caravan Builders</span>
+                        </div>
+                        <span class="text-xs font-semibold bg-red-50 text-red-600 px-2.5 py-1 rounded-full border border-red-100">Verified Buyer</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4 text-base">★★★★★</div>
+                        <p class="text-gray-700 italic text-sm mb-6 leading-relaxed">"We've been sourcing our MPPT controllers and 210W solar panels from Power Science since 2021. Extremely reliable gear that handles outback corrugations effortlessly."</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t pt-4 border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Dave Henderson</h4>
+                            <span class="text-xs text-gray-500">Outback Off-Grid Electrics</span>
+                        </div>
+                        <span class="text-xs font-semibold bg-red-50 text-red-600 px-2.5 py-1 rounded-full border border-red-100">Verified Buyer</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="flex items-center space-x-1 text-amber-500 mb-4 text-base">★★★★★</div>
+                        <p class="text-gray-700 italic text-sm mb-6 leading-relaxed">"Great range of 12V lighting and connectors. The quick-connect Anderson plugs saved us hours on our latest 4x4 canopy build. Highly recommend the team."</p>
+                    </div>
+                    <div class="flex items-center justify-between border-t pt-4 border-gray-100">
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-sm">Sarah Jenkins</h4>
+                            <span class="text-xs text-gray-500">DIY 4x4 Enthusiast</span>
+                        </div>
+                        <span class="text-xs font-semibold bg-red-50 text-red-600 px-2.5 py-1 rounded-full border border-red-100">Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review Submission Module -->
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Leave a Review</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you for your feedback! Your review has been submitted for moderation.'); this.reset();" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <input type="text" required placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm">
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm text-gray-600">
+                            <option value="5">★★★★★ (5 Stars)</option>
+                            <option value="4">★★★★☆ (4 Stars)</option>
+                            <option value="3">★★★☆☆ (3 Stars)</option>
+                            <option value="2">★★☆☆☆ (2 Stars)</option>
+                            <option value="1">★☆☆☆☆ (1 Star)</option>
+                        </select>
+                    </div>
+                    <textarea required placeholder="Tell us about your experience with our products..." rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm resize-none"></textarea>
+                    <button type="submit" class="w-full bg-gray-900 hover:bg-red-600 text-white font-bold py-3 rounded-lg transition">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="about" class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4">Power Science Australia</h3>
+                <p class="text-sm mb-4">Your trusted partner for off-grid power solutions, 240V hardware, and premium caravan components since 2018. Quality supply for trade and retail.</p>
+                <div class="flex items-center text-sm">
+                    <span class="mr-2 text-red-500">📍</span> 74 Killara Road, Campbellfield VIC 3061
+                </div>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
+                    <li><a href="#products" class="hover:text-red-400 transition">Catalogue & Shop</a></li>
+                    <li><a href="#testimonials" class="hover:text-red-400 transition">Reviews</a></li>
+                    <li><a href="#" class="hover:text-red-400 transition">Shipping & Returns</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white text-lg font-bold mb-4">Contact Sales</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center"><span class="mr-2">📞</span> Mobile: (+61) 422 351 610</li>
+                    <li class="flex items-center"><span class="mr-2">✉️</span> onlinesales@powersciencegroup.com.au</li>
+                    <li class="flex items-center"><span class="mr-2">🏢</span> ABN: 12 345 678 901</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-xs text-center">
+            &copy; 2026 Power Science Australia. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- OVERLAYS & MODALS (Hidden by default)      -->
+    <!-- ========================================== -->
+
+    <!-- Product Category Drill-down Modal -->
+    <div id="product-modal" class="hidden fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6 opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden transform scale-95 transition-transform duration-300" id="product-modal-content">
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-50">
+                <h3 id="modal-category-title" class="text-xl font-extrabold text-gray-900">Category Products</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-red-600 bg-white hover:bg-red-50 rounded-full w-8 h-8 flex items-center justify-center transition border border-gray-200 shadow-sm">
+                    <span class="text-xl leading-none">&times;</span>
+                </button>
+            </div>
+            <!-- Modal Body (Items List) -->
+            <div class="p-6 overflow-y-auto bg-white flex-1 no-scrollbar">
+                <div id="modal-products-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Products injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Side Drawer -->
+    <div id="cart-overlay" onclick="toggleCartDrawer()" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-[70] transition-opacity"></div>
+    <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-2xl z-[80] transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="px-6 py-4 border-b border-gray-200 flex justify-between items-center bg-gray-900 text-white">
+            <h3 class="text-lg font-bold flex items-center"><span class="mr-2">🛒</span> Your Cart</h3>
+            <button onclick="toggleCartDrawer()" class="text-gray-400 hover:text-white transition text-2xl leading-none">&times;</button>
+        </div>
+        
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4 no-scrollbar bg-gray-50">
+            <!-- Cart items injected via JS -->
+            <div id="empty-cart-msg" class="text-center py-10 text-gray-500">
+                <div class="text-4xl mb-3">🛒</div>
+                <p>Your cart is currently empty.</p>
+            </div>
+        </div>
+
+        <div class="p-6 bg-white border-t border-gray-200 shadow-[0_-10px_15px_-3px_rgba(0,0,0,0.05)]">
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-600 font-medium">Subtotal</span>
+                <span id="cart-subtotal" class="text-2xl font-extrabold text-gray-900">$0.00</span>
+            </div>
+            <button onclick="openCheckout()" id="checkout-btn" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl transition shadow-md disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="hidden fixed inset-0 z-[90] bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-200 bg-gray-900 text-white flex justify-between items-center">
+                <h3 class="text-lg font-bold">Checkout & Order Summary</h3>
+                <button onclick="closeCheckout()" class="text-gray-400 hover:text-white transition text-2xl leading-none">&times;</button>
+            </div>
+            <div class="p-6">
+                <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 mb-6">
+                    <h4 class="font-bold text-gray-800 border-b border-gray-200 pb-2 mb-2">Order Total: <span id="checkout-total" class="text-red-600 float-right">$0.00</span></h4>
+                    <p class="text-xs text-gray-500">This is a B2B/Retail quotation portal. A sales representative will contact you for payment processing and freight calculation after submission.</p>
+                </div>
+                <form onsubmit="processOrder(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Company / Name</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Email</label>
+                            <input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Phone</label>
+                            <input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 mb-1">Shipping Address / Postcode</label>
+                        <input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 outline-none text-sm">
+                    </div>
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-xl transition shadow-md mt-4">
+                        Submit Order Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- VANILLA JAVASCRIPT LOGIC                   -->
+    <!-- ========================================== -->
+    <script>
+        // --- 1. Product Database (Mockup for Modals) ---
+        const productDB = {
+            powerpoints: [
+                { id: 'p1', code: 'GPD317', name: '10A single powerpoint Double Pole White', price: 8.50, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.01.001.jpg' },
+                { id: 'p2', code: 'GPA302S-V', name: '10A double powerpoints Double Pole', price: 12.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.01.002.jpg' },
+                { id: 'p3', code: 'GPD318', name: '10 single powerpoint Double Pole White', price: 6.50, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.01.003.jpg' },
+                { id: 'p4', code: 'GPA302S', name: '10A double powerpoints Double Pole White', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.01.004.jpg' }, 
+                { id: 'p5', code: 'GPD302', name: '1 G 2 way switch 10A White', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.001.jpg' }, 
+                { id: 'p6', code: 'GPD304', name: '2 G 2 way switch 10A', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.002.jpg' }, 
+                { id: 'p7', code: 'GPD306', name: '3 G 2 way switch 10A', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.003.jpg' },
+                { id: 'p8', code: 'GPD308', name: '4 G 2 way switch 10A', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.004.jpg' },
+                { id: 'p9', code: 'GPD310', name: '5 G 2 way switch 10A', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.005.jpg' },
+                { id: 'p10', code: 'GPD312', name: '6 G 2 way switch 10A', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.006.jpg' },
+                { id: 'p11', code: 'GPA302S-V', name: '1G architrave switch White', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.013.jpg' },
+                { id: 'p12', code: 'GPD304', name: '2 G 2 way switch 10A White', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.02.014.jpg' },
+                { id: 'p13', code: 'GPA400', name: 'Mounting block (116mm*73mm*36mm)', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.03.001.jpg' },
+                { id: 'p14', code: 'GPA400', name: 'Mounting block (116mm*73mm*36mm)', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.03.002.jpg' },
+                { id: 'p15', code: 'GPD302-C', name: '1 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.001.jpg' },
+                { id: 'p16', code: 'GPD304-C', name: '2 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.002.jpg' },
+                { id: 'p17', code: 'GPD306-C', name: '3 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.003.jpg' },
+                { id: 'p18', code: 'GPD308-C', name: '4 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.004.jpg' },
+                { id: 'p19', code: 'GPD310-C', name: '5 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.005.jpg' },
+                { id: 'p20', code: 'GPD312-C', name: '6 G 2 way switch 10A White Cover', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.04.006.jpg' },
+                { id: 'p21', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.05.001.jpg' },
+                { id: 'p22', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.05.002.jpg' },
+                { id: 'p23', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.05.003.jpg' },
+                { id: 'p24', code: 'GOUTL-10B', name: 'Outlet 10AMP Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.06.001.jpg' },
+                { id: 'p25', code: 'GOUTL-10B', name: 'Outlet 10AMP Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.06.002.jpg' },
+                { id: 'p26', code: 'GINLEMB', name: 'Mounting Flange for Outlet/Inlet - Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.06.003.jpg' },
+                { id: 'p27', code: 'RCBO-TRCD2P16E', name: 'Circuit Breaker Switch', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.07.001.jpg' },
+                { id: 'p28', code: 'RCBO-TRCD2P16E Orange', name: 'Circuit Breaker Switch', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.07.002.jpg' },
+                { id: 'p29', code: 'RMBO-E10', name: '2 Pole Circuit Breaker Enclosure', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.07.011.jpg' },
+                { id: 'p30', code: 'GPD302', name: '1 G 2 way switch 10A White', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\15.08.001.jpg' },
+                { id: 'p31', code: 'GPD312', name: '6 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\240V Upload\\302.png' },
+                { id: 'p32', code: 'GPD312', name: '6 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\.trashed-1789945438-IMG_20260822_090304265.jpg' },
+                { id: 'p33', code: 'GPD318', name: '10A double powerpoints Double Pole Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\.trashed-1789945484-IMG_20260822_090344896.jpg' },
+                { id: 'p34', code: 'GPD318', name: '10A double powerpoints Double Pole Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\.trashed-1789945956-IMG_20260822_091219571.jpg' },
+                { id: 'p35', code: 'GOUTL-10B', name: 'Outlet 10AMP Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\.trashed-1789946450-IMG_20260822_092044373.jpg' },
+                { id: 'p36', code: 'GPD312', name: '6 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\.trashed-1789955050-IMG_20260822_114348914~2.jpg' },
+                { id: 'p37', code: 'GPD310', name: '5 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090530770.jpg' },
+                { id: 'p38', code: 'GPD306-BS', name: '3 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090602878.jpg' },
+                { id: 'p39', code: 'GPD306-BS', name: '3 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090632769.jpg' },
+                { id: 'p40', code: 'GPD306-B', name: '3 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090653227.jpg' },
+                { id: 'p41', code: 'GPD304', name: '2 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090801555.jpg' },
+                { id: 'p42', code: 'GPD302', name: '1 G 2 way switch 10A Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090843684.jpg' },
+                { id: 'p43', code: 'GPD318', name: '10A double powerpoints Double Pole', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_090911297.jpg' },
+                { id: 'p44', code: 'GPD318', name: '10A double powerpoints Double Pole', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_091231123.jpg' },
+                { id: 'p45', code: 'GPD318', name: '10A double powerpoints Double Pole', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_091310663.jpg' },
+                { id: 'p46', code: 'GPA304S-V', name: '2G architrave switch Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_091338577.jpg' },
+                { id: 'p47', code: 'GPD312', name: '6 G 2 way switch 10A Matte Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_091358285.jpg' },
+                { id: 'p48', code: 'GPD312', name: '6 G 2 way switch 10A Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_091544071.jpg' },
+                { id: 'p49', code: 'GPD310', name: '5 G 2 way switch 10A Black Sliver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092234244.jpg' },
+                { id: 'p50', code: 'GPD306-BS', name: '3 G 2 way switch 10A Black Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092256055.jpg' },
+                { id: 'p51', code: 'GPD306-BS', name: '3 G 2 way switch 10A Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092321057_BURST000_COVER.jpg' },
+                { id: 'p52', code: 'GPD306-BS', name: '3 G 2 way switch 10A Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092339611.jpg' },
+                { id: 'p53', code: 'GPD304', name: '2 G 2 way switch 10A Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092406634.jpg' },
+                { id: 'p54', code: 'GPA302S-V', name: '1G architrave switch Black', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092426362.jpg' },
+                { id: 'p55', code: 'GPD318', name: '10A double powerpoints Double Pole Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092440010.jpg' },
+                { id: 'p56', code: 'GPD318', name: '10A double powerpoints Double Pole Black and Silver', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092449309.jpg' },
+                { id: 'p57', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_092519329.jpg' },
+                { id: 'p58', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_101607182.jpg' },
+                { id: 'p59', code: 'SW-2G', name: '2 Gang Switch 250V', price: 9.00, img: 'C:\\Users\\User\\Desktop\\PIC\\240V Power Items\\重复\\IMG_20260822_102611471.jpg' },
+
+            ],
+            breakers: [
+                { id: 'b1', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.04.001.jpg' },
+                { id: 'b2', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.05.001.jpg' },
+                { id: 'b3', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.001.jpg' },
+                { id: 'b4', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.002.jpg' },
+                { id: 'b5', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.003.jpg' },
+                { id: 'b6', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.004.jpg' },
+                { id: 'b7', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.005.jpg' },
+                { id: 'b8', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.06.012.jpg' },
+                { id: 'b9', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.07.001.jpg' },
+                { id: 'b10', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.07.006.jpg' },
+                { id: 'b11', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.09.001.jpg' },
+                { id: 'b12', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.15.001.jpg' },
+                { id: 'b13', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.16.001.jpg' },
+                { id: 'b14', code: 'DC-CB-50', name: 'DC Circuit Breaker 50A', price: 24.00, img:'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.17.001.jpg' },
+
+            ],
+            connectors: [
+                { id: 'c1', code: 'AND-50', name: 'Anderson Plug 50A (Grey)', price: 5.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.09.101.jpg' },
+                { id: 'c2', code: 'LUG-16-8', name: 'Copper Cable Lug 16mm x 8mm (10pk)', price: 15.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.09.102.jpg' },
+                { id: 'c3', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\Power Accessories Upload\\25.09.103.jpg' },
+                { id: 'c4', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Power Accessories\\.trashed-1789952074-IMG_20260822_105410102.jpg' },
+                { id: 'c5', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.03.001.jpg' },
+                { id: 'c6', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.03.002.jpg' },
+                { id: 'c7', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.03.003.jpg' },
+                { id: 'c8', code: 'TERM-INS', name: 'Assorted Insulated Terminals (100pk)', price: 18.50, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.03.004.jpg' },   
+                
+            ],
+            solar: [
+                { id: 's1', code: 'SOL-210W', name: '210W Monocrystalline Solar Panel', price: 185.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\.trashed-1789942337-IMG_20260822_081043177.jpg' },
+                { id: 's2', code: 'MPPT-30A', name: '30A MPPT Solar Charge Controller', price: 145.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\IMG_20260822_074537641_PORTRAIT.jpg' },
+                { id: 's3', code: 'MC4-Y', name: 'MC4 Y-Branch Connectors (Pair)', price: 12.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\IMG_20260822_080901874_MF_PORTRAIT.jpg' },
+                { id: 's4', code: 'MC4-Y', name: 'MC4 Y-Branch Connectors (Pair)', price: 12.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.01.001.jpg' },
+                { id: 's5', code: 'MC4-Y', name: 'MC4 Y-Branch Connectors (Pair)', price: 12.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\30.01.002.jpg' },
+                { id: 's6', code: 'MC4-Y', name: 'MC4 Y-Branch Connectors (Pair)', price: 12.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Solar System\\Solar Upload\\Solar-Panels.jpg' },
+            ],
+            sockets: [
+                { id: 'sk1', code: 'USB-C-12V', name: '12V Dual USB-A & USB-C Socket', price: 22.00, img:'C:\\Users\\User\\Desktop\\PIC\\12V Power Items\\重复\\.trashed-1789950439-IMG_20260822_102650899.jpg' },
+                { id: 'sk2', code: 'INLET-15A', name: '15A 240V Power Inlet (White)', price: 35.00, img: 'C:\\Users\\User\\Desktop\\PIC\\12V Power Items\\重复\\.trashed-1789954913-IMG_20260822_114133904.jpg' },
+                { id: 'sk3', code: 'RCBO-16A', name: '16A RCBO Safety Switch', price: 45.00, img: 'C:\\Users\\User\\Desktop\\PIC\\12V Power Items\\重复\\IMG_20260822_105921587.jpg' },
+                { id: 'sk4', code: 'RCBO-16A', name: '16A RCBO Safety Switch', price: 45.00, img: 'C:\\Users\\User\\Desktop\\PIC\\12V Power Items\\重复\\IMG_20260822_111359853.jpg' },
+                { id: 'sk5', code: 'RCBO-16A', name: '16A RCBO Safety Switch', price: 45.00, img: 'C:\\Users\\User\\Desktop\\PIC\\12V Power Items\\重复\\IMG_20260822_111641445.jpg' },
+            ],
+            lights: [
+                { id: 'l1', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.001.jpg' },
+                { id: 'l2', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.002.jpg' },
+                { id: 'l3', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.003.jpg' },
+                { id: 'l4', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.004.jpg' },
+                { id: 'l5', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.005.jpg' },
+                { id: 'l6', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.006.jpg' },
+                { id: 'l7', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.007.jpg' },
+                { id: 'l8', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.01.008.jpg' },
+                { id: 'l9', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.02.001.jpg' },
+                { id: 'l10', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.02.002.jpg' },
+                { id: 'l11', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.02.003.jpg' },
+                { id: 'l12', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.03.001.jpg' },
+                { id: 'l13', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.06.002.jpg' },
+                { id: 'l14', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.02.003.jpg' },
+                { id: 'l15', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.06.002.jpg' },
+                { id: 'l16', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.06.003.jpg' },
+                { id: 'l17', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.07.001.jpg' },
+                { id: 'l18', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.07.002.jpg' },
+                { id: 'l19', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.07.003.jpg' },
+                { id: 'l20', code: 'LED-STR-5M', name: '5m LED Strip Light (Warm White)', price: 25.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Lights\\Lights - Upload\\35.50.001.jpg' },
+
+            ],
+            basins: [
+                { id: 'bs1', code: 'CB-OVAL-W', name: 'Oval Ceramic Basin (White)', price: 85.00, img: 'https://placehold.co/400x300/f8fafc/94a3b8?text=Oval+Basin' },
+                { id: 'bs2', code: 'WASTE-POP', name: 'Pop-up Waste Drain (Chrome)', price: 20.00, img: 'https://placehold.co/400x300/f8fafc/94a3b8?text=Waste+Drain' }
+            ],
+            comfort: [
+                { id: 'cf1', code: 'HEAT-2KW', name: '2kW Diesel Heater Full Kit', price: 295.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Diesel Heater\\IMG_20260822_080241807.jpg' },
+                { id: 'cf2', code: 'HEAT-2KW', name: '2kW Diesel Heater Full Kit', price: 295.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Diesel Heater\\IMG_20260822_075109125_MF_PORTRAIT.jpg' },
+                { id: 'cf3', code: 'HEAT-2KW', name: '2kW Diesel Heater Full Kit', price: 295.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Diesel Heater\\.trashed-1789948503-IMG_20260822_095405279.jpg' },
+                { id: 'cf4', code: 'HEAT-2KW', name: '2kW Diesel Heater Full Kit', price: 295.00, img: 'C:\\Users\\User\\Desktop\\PIC\\Diesel Heater\\IMG_20260822_075354770_MF_PORTRAIT.jpg' },
+
+                
+            ]
+        };
+
+        const categoryTitles = {
+            powerpoints: "Powerpoints & Switches",
+            breakers: "Circuit Breakers & Fuses",
+            connectors: "Connectors & Lugs",
+            solar: "Solar Panels & Chargers",
+            sockets: "Sockets, Plugs & Inlets",
+            lights: "Lighting Solutions",
+            basins: "Ceramic Basins & Waste",
+            comfort: "Heating, Cooling & 240V"
+        };
+
+        // --- 2. Shopping Cart Logic ---
+        let cart = [];
+
+        function addToCart(id, name, price, code) {
+            const existingItem = cart.find(item => item.id === id);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ id, name, price, code, qty: 1 });
+            }
+            updateCartUI();
+            
+            // Visual feedback
+            const btn = event.target;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "✓ Added!";
+            btn.classList.add('bg-green-600', 'text-white');
+            btn.classList.remove('bg-red-50', 'text-red-600');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-green-600', 'text-white');
+                btn.classList.add('bg-red-50', 'text-red-600');
+            }, 1000);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const emptyMsg = document.getElementById('empty-cart-msg');
+            const badge = document.getElementById('cart-badge');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const checkoutBtn = document.getElementById('checkout-btn');
+
+            // Update Badge
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            badge.innerText = totalQty;
+
+            // Render Items
+            if (cart.length === 0) {
+                emptyMsg.style.display = 'block';
+                container.innerHTML = '';
+                container.appendChild(emptyMsg);
+                subtotalEl.innerText = '$0.00';
+                checkoutBtn.disabled = true;
+                return;
+            }
+
+            emptyMsg.style.display = 'none';
+            container.innerHTML = '';
+            let subtotal = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.qty;
+                subtotal += itemTotal;
+                container.innerHTML += `
+                    <div class="bg-white p-3 rounded-lg shadow-sm border border-gray-100 flex justify-between items-center">
+                        <div>
+                            <div class="text-xs text-gray-500 font-mono">${item.code}</div>
+                            <div class="text-sm font-bold text-gray-800 line-clamp-1">${item.name}</div>
+                            <div class="text-xs text-red-600 font-semibold mt-1">$${item.price.toFixed(2)} x ${item.qty}</div>
+                        </div>
+                        <button onclick="removeFromCart('${item.id}')" class="text-gray-400 hover:text-red-600 p-2">
+                            <span class="text-xl leading-none">🗑️</span>
+                        </button>
+                    </div>
+                `;
+            });
+
+            subtotalEl.innerText = `$${subtotal.toFixed(2)}`;
+            checkoutBtn.disabled = false;
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cart-drawer');
+            const overlay = document.getElementById('cart-overlay');
+            if (drawer.classList.contains('translate-x-full')) {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('hidden');
+            } else {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('hidden');
+            }
+        }
+
+        // --- 3. Modals & UI Toggles ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openModal(categoryKey) {
+            const modal = document.getElementById('product-modal');
+            const content = document.getElementById('product-modal-content');
+            const title = document.getElementById('modal-category-title');
+            const list = document.getElementById('modal-products-list');
+            
+            title.innerText = categoryTitles[categoryKey];
+            list.innerHTML = '';
+
+            const products = productDB[categoryKey];
+            products.forEach(p => {
+                list.innerHTML += `
+                    <div class="border border-gray-200 rounded-xl p-4 flex flex-col justify-between hover:border-red-300 transition group bg-gray-50 hover:bg-white shadow-sm hover:shadow-md cursor-default">
+                        <div>
+                            <div class="w-full h-40 mb-4 bg-white rounded-lg overflow-hidden flex items-center justify-center border border-gray-100">
+                                <img src="${p.img}" alt="${p.name}" class="object-contain h-full w-full group-hover:scale-105 transition duration-500">
+                            </div>
+                            <span class="text-xs font-mono bg-gray-200 text-gray-700 px-2 py-0.5 rounded">${p.code}</span>
+                            <h4 class="font-bold text-gray-900 mt-2 mb-1">${p.name}</h4>
+                            <div class="text-lg font-extrabold text-red-600 mb-4">$${p.price.toFixed(2)}</div>
+                        </div>
+                        <button onclick="addToCart('${p.id}', '${p.name}', ${p.price}, '${p.code}')" class="w-full bg-red-50 hover:bg-red-600 text-red-600 hover:text-white border border-red-100 font-bold py-2 rounded-lg transition text-sm">
+                            Add to Cart
+                        </button>
+                    </div>
+                `;
+            });
+
+            modal.classList.remove('hidden');
+            // Small delay for animation
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                content.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('product-modal');
+            const content = document.getElementById('product-modal-content');
+            
+            modal.classList.add('opacity-0');
+            content.classList.add('scale-95');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function openCheckout() {
+            toggleCartDrawer();
+            document.getElementById('checkout-total').innerText = document.getElementById('cart-subtotal').innerText;
+            document.getElementById('checkout-modal').classList.remove('hidden');
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        function processOrder(e) {
+            e.preventDefault();
+            alert("Order Request Received! Our sales team will contact you shortly.");
+            cart = [];
+            updateCartUI();
+            closeCheckout();
+        }
+
+        // --- 4. Search Filter Logic ---
+        function filterCategories() {
+            const input = document.getElementById('catalogue-search').value.toLowerCase();
+            const cards = document.querySelectorAll('.category-card');
+            const noResults = document.getElementById('no-results');
+            let hasVisible = false;
+
+            cards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                
+                if (keywords.includes(input) || title.includes(input)) {
+                    card.style.display = 'flex';
+                    hasVisible = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (!hasVisible) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function quickSearch(term) {
+            document.getElementById('catalogue-search').value = term;
+            filterCategories();
+            document.getElementById('products').scrollIntoView();
+        }
+
+        function resetSearch() {
+            document.getElementById('catalogue-search').value = '';
+            filterCategories();
+        }
+
+        // --- 5. Hero Slideshow Logic ---
+        let slideIndex = 0;
+        let slideInterval;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('.slide-dot');
+
+        function showSlide(n) {
+            slides.forEach(s => s.classList.replace('opacity-100', 'opacity-0'));
+            dots.forEach(d => {
+                d.classList.remove('bg-red-600');
+                d.classList.add('bg-gray-300');
+            });
+            
+            slides[n].classList.replace('opacity-0', 'opacity-100');
+            dots[n].classList.remove('bg-gray-300');
+            dots[n].classList.add('bg-red-600');
+            slideIndex = n;
+        }
+
+        function currentSlide(n) {
+            clearInterval(slideInterval);
+            showSlide(n);
+            startSlideshow();
+        }
+
+        function startSlideshow() {
+            slideInterval = setInterval(() => {
+                let next = (slideIndex + 1) % slides.length;
+                showSlide(next);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Init slideshow on load
+        window.addEventListener('DOMContentLoaded', () => {
+            startSlideshow();
+        });
+
+    </script>
+</body>
+</html>
